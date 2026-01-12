@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Operasi Matriks</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<div class="container">
+    <h1>Program Operasi Matriks</h1>
+
+    <div class="row">
+        <div class="left">
+            <div id="matriksA"></div>
+            <div id="matriksB"></div>
+        </div>
+
+        <div class="right">
+            <h3>Ukuran Matriks A</h3>
+            <input type="number" id="barisA" placeholder="Baris">
+            <input type="number" id="kolomA" placeholder="Kolom">
+
+            <h3>Ukuran Matriks B</h3>
+            <input type="number" id="barisB" placeholder="Baris">
+            <input type="number" id="kolomB" placeholder="Kolom">
+
+            <button onclick="input()">Buat Matriks</button>
+        </div>
+    </div>
+
+    <div class="opsi">
+        <button onclick="kirim('tambah')">Penjumlahan</button>
+        <button onclick="kirim('kurang')">Pengurangan</button>
+        <button onclick="kirim('kali')">Perkalian</button>
+        <button onclick="kirim('transpose')">Transpose</button>
+        <button onclick="kirim('determinan')">Determinan</button>
+    </div>
+
+    <h2>Hasil</h2>
+    <div id="hasil">—</div>
+</div>
+
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>

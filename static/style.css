@@ -1,0 +1,264 @@
+<<<<<<< HEAD
+/* =========================
+   RESET & DASAR
+========================= */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background: linear-gradient(135deg, #020617, #020617);
+    color: #e5e7eb;
+    font-family: Arial, sans-serif;
+}
+
+/* =========================
+   CONTAINER
+========================= */
+.container {
+    width: 900px;
+    margin: 40px auto;
+}
+
+/* =========================
+   JUDUL
+========================= */
+h1 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+h2 {
+    text-align: center;
+    margin-top: 30px;
+}
+
+/* =========================
+   GRID UTAMA
+========================= */
+.row {
+    display: grid;
+    grid-template-columns: 1fr 300px;
+    gap: 30px;
+    align-items: stretch;
+}
+
+/* =========================
+   PANEL KIRI & KANAN
+========================= */
+.left, .right {
+    background: #020617;
+    padding: 20px;
+    border: 1px solid #334155;
+    border-radius: 12px;
+    transition: all 0.25s ease;
+}
+
+.left:hover,
+.right:hover {
+    box-shadow: 0 0 0 1px #38bdf8;
+}
+
+/* =========================
+   ISI MATRIKS (KIRI)
+========================= */
+.left {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 40px;
+    min-height: 220px;
+}
+
+#matriksA,
+#matriksB {
+    text-align: center;
+}
+
+#matriksA::before {
+    /* content: "Matriks A"; */
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+#matriksB::before {
+    /* content: "Matriks B"; */
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+/* =========================
+   TABEL MATRIKS
+========================= */
+table {
+=======
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f6f8;
+}
+
+.container {
+    width: 500px;
+    margin: auto;
+    background: white;
+    padding: 20px;
+    margin-top: 30px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+h1, h2 {
+    text-align: center;
+}
+
+input {
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 6px;
+}
+
+table {
+    margin: 10px auto;
+>>>>>>> d3ef150d0511d8f2d2b5d8fca64c795e6fd397a4
+    border-collapse: collapse;
+}
+
+td {
+<<<<<<< HEAD
+    padding: 4px;
+}
+
+td input {
+    width: 48px;
+    padding: 6px;
+    text-align: center;
+    background: #020617;
+    color: white;
+    border: 1px solid #334155;
+    border-radius: 6px;
+    transition: 0.2s;
+}
+
+td input:focus {
+    outline: none;
+    border-color: #38bdf8;
+    box-shadow: 0 0 6px rgba(56,189,248,0.5);
+}
+
+/* =========================
+   PANEL KANAN (UKURAN)
+========================= */
+.right h3 {
+    margin-bottom: 6px;
+    margin-top: 18px;
+}
+
+.right h3:first-child {
+    margin-top: 0;
+}
+
+input[type="number"] {
+    width: 100%;
+    padding: 8px;
+    margin: 6px 0 14px;
+    background: #020617;
+    color: white;
+    border: 1px solid #334155;
+    border-radius: 8px;
+    transition: 0.2s;
+}
+
+input[type="number"]:focus {
+    outline: none;
+    border-color: #38bdf8;
+    box-shadow: 0 0 8px rgba(56,189,248,0.4);
+}
+
+/* =========================
+   BUTTON
+========================= */
+button {
+    padding: 8px 16px;
+    margin: 6px 4px;
+    border: none;
+    border-radius: 10px;
+    background: linear-gradient(135deg, #38bdf8, #0ea5e9);
+    color: #020617;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 18px rgba(56,189,248,0.4);
+}
+
+button:active {
+    transform: scale(0.96);
+}
+
+/* =========================
+   OPERASI
+========================= */
+.opsi {
+    margin-top: 30px;
+    text-align: center;
+}
+
+/* =========================
+   HASIL
+========================= */
+#hasil {
+    margin-top: 16px;
+    padding: 20px;
+    border: 1px solid #334155;
+    border-radius: 12px;
+    text-align: center;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 80px;
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+@media (max-width: 900px) {
+    .container {
+        width: 95%;
+    }
+
+    .row {
+        grid-template-columns: 1fr;
+    }
+
+    .left {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+=======
+    padding: 5px;
+}
+
+td input {
+    width: 60px;
+}
+
+.buttons {
+    text-align: center;
+}
+
+button {
+    margin: 5px;
+    padding: 8px 12px;
+    cursor: pointer;
+}
+
+>>>>>>> d3ef150d0511d8f2d2b5d8fca64c795e6fd397a4
