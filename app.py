@@ -106,7 +106,6 @@ def obe_tambah_baris(M, target, source, k):
     ]
     return M
 
-# ================= OBE KOLOM =================
 def obe_tukar_kolom(M, i, j):
     for r in range(len(M)):
         M[r][i], M[r][j] = M[r][j], M[r][i]
@@ -122,7 +121,6 @@ def obe_tambah_kolom(M, target, source, k):
         M[r][target] += k * M[r][source]
     return M
 
-# ================= ROUTES =================
 @app.route('/')
 def index():
     return render_template('index.html')
@@ -136,7 +134,6 @@ def matrix():
     target = data.get("target", "A")
 
     try:
-        # ==== OPERASI DASAR ====
         if operasi == "tambah":
             result = tambah(A, B)
 
@@ -158,7 +155,7 @@ def matrix():
         elif operasi == "detB":
             result = [[determinan(B)]]
 
-        # ==== OBE BARIS ====
+        
         elif operasi == "tukar":
             result = obe_tukar_baris(A, data["i"], data["j"])
 
@@ -168,7 +165,6 @@ def matrix():
         elif operasi == "tambahBaris":
             result = obe_tambah_baris(A, data["i"], data["j"], data["k"])
 
-        # ==== OBE KOLOM ====
         elif operasi == "tukarKolom":
             result = obe_tukar_kolom(A, data["i"], data["j"])
 
@@ -188,4 +184,4 @@ def matrix():
 
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run(host="0.0.0.0", port=8080)
