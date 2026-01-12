@@ -1,25 +1,15 @@
 let stateA = [];
 let stateB = [];
 
-// =================== INPUT DINAMIS ===================
 function input() {
     simpannilai();
-<<<<<<< HEAD
 
-=======
-    
->>>>>>> c310904e20aa8002271894607c90543717054bd2
     let barisA = parseInt(document.getElementById("barisA").value);
     let kolomA = parseInt(document.getElementById("kolomA").value);
     let barisB = parseInt(document.getElementById("barisB").value);
     let kolomB = parseInt(document.getElementById("kolomB").value);
 
-<<<<<<< HEAD
     // Matriks A
-=======
-
-//Matrix A
->>>>>>> c310904e20aa8002271894607c90543717054bd2
     if (barisA > 0 && kolomA > 0) {
         let htmlA = "<h3>Matriks A</h3><table>";
         for (let i = 0; i < barisA; i++) {
@@ -50,7 +40,6 @@ function input() {
     }
 }
 
-// =================== AMBIL MATRKS ===================
 function ambilMatriks(prefix) {
     let result = [];
     let i = 0;
@@ -62,11 +51,7 @@ function ambilMatriks(prefix) {
         while (true) {
             let el = document.getElementById(prefix + i + j);
             if (!el) break;
-<<<<<<< HEAD
             row.push(parseFloat(el.value) || 0);
-=======
-            row.push(parseFloat(el.value)|| 0);
->>>>>>> c310904e20aa8002271894607c90543717054bd2
             j++;
         }
 
@@ -78,20 +63,13 @@ function ambilMatriks(prefix) {
     return result;
 }
 
-// =================== SIMPAN STATE ===================
 function simpannilai() {
     stateA = ambilMatriks("A");
     stateB = ambilMatriks("B");
 }
 
-<<<<<<< HEAD
-// =================== KIRIM OPERASI MATRIKS ===================
 function kirim(operasi, target = "A") {
     simpannilai();
-=======
-function kirim(operasi) {
-    simpannilai(); // ambil state terbaru
->>>>>>> c310904e20aa8002271894607c90543717054bd2
 
     let data = { operasi: operasi, target: target, A: stateA, B: stateB };
 
@@ -112,11 +90,10 @@ function kirim(operasi) {
     .catch(err => { console.error(err); alert("Gagal menghubungi server"); });
 }
 
-// =================== OBE BARIS/KOLOM TUNGAL ===================
 function obeExecute(type) {
     simpannilai();
 
-    let obeType = document.getElementById("obeType").value; // row/col
+    let obeType = document.getElementById("obeType").value; 
     let i = parseInt(document.getElementById("obe_i").value);
     let j = parseInt(document.getElementById("obe_j").value);
     let k = parseFloat(document.getElementById("obe_k").value);
@@ -127,7 +104,6 @@ function obeExecute(type) {
     else if (type === "scale") payload.operasi = obeType === "row" ? "kaliBaris" : "kaliKolom";
     else if (type === "add") payload.operasi = obeType === "row" ? "tambahBaris" : "tambahKolom";
 
-    // Parameter sesuai jenis operasi
     if (type === "swap") { payload.i = i; payload.j = j; }
     else if (type === "scale") { payload.i = i; payload.k = k; }
     else if (type === "add") { payload.i = j; payload.j = i; payload.k = k; }
@@ -148,7 +124,6 @@ function obeExecute(type) {
     .catch(err => { console.error(err); alert("Gagal menghubungi server"); });
 }
 
-// =================== TAMPILKAN HASIL ===================
 function tampilkanHasil(matriks) {
     if (!matriks || matriks.length === 0) {
         document.getElementById("hasil").innerHTML = "—";
@@ -167,10 +142,3 @@ function tampilkanHasil(matriks) {
 
     document.getElementById("hasil").innerHTML = html;
 }
-<<<<<<< HEAD
-=======
-
-
-
-
->>>>>>> c310904e20aa8002271894607c90543717054bd2
