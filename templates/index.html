@@ -33,8 +33,30 @@
         <button onclick="kirim('tambah')">Penjumlahan</button>
         <button onclick="kirim('kurang')">Pengurangan</button>
         <button onclick="kirim('kali')">Perkalian</button>
-        <button onclick="kirim('transpose')">Transpose</button>
-        <button onclick="kirim('determinan')">Determinan</button>
+        <button onclick="kirim('transpose','A')">Transpose A</button>
+        <button onclick="kirim('transpose','B')">Transpose B</button>
+        <button onclick="kirim('invers','A')">Invers A</button>
+        <button onclick="kirim('invers','B')">Invers B</button>
+        <button onclick="kirim('detA')">Determinan A</button>
+        <button onclick="kirim('detB')">Determinan B</button>
+        <hr>
+        <h3>Transformasi Elementer (Baris/Kolom)</h3>
+
+        <select id="obeType">
+            <option value="row">Baris</option>
+            <option value="col">Kolom</option>
+        </select>
+
+        <input type="number" id="obe_i" placeholder="i">
+        <input type="number" id="obe_j" placeholder="j">
+        <input type="number" id="obe_k" placeholder="k">
+
+        <button onclick="obeExecute('swap')">Tukar i ↔ j</button>
+        <button onclick="obeExecute('scale')">× i</button>
+        <button onclick="obeExecute('add')">j + k*i</button>
+
+
+
     </div>
 
     <h2>Hasil</h2>
