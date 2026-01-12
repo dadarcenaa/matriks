@@ -4,20 +4,12 @@ let stateB = [];
 
 function input() {
     simpannilai();
-<<<<<<< HEAD
+    
     let barisA = parseInt(document.getElementById("barisA").value);
     let kolomA = parseInt(document.getElementById("kolomA").value);
     let barisB = parseInt(document.getElementById("barisB").value);
     let kolomB = parseInt(document.getElementById("kolomB").value);
-=======
-    let barisA = document.getElementById("barisA").value;
-    let kolomA = document.getElementById("kolomA").value;
-    let barisB = document.getElementById("barisB").value;
-    let kolomB = document.getElementById("kolomB").value;
->>>>>>> d3ef150d0511d8f2d2b5d8fca64c795e6fd397a4
 
-    
-    
 
 //Matrix A
     if (barisA > 0 && kolomA > 0) {
@@ -64,11 +56,7 @@ function ambilMatriks(prefix) {
         while (true) {
             let el = document.getElementById(prefix + i + j);
             if (!el) break;
-<<<<<<< HEAD
             row.push(parseFloat(el.value)|| 0);
-=======
-            row.push(el.value);
->>>>>>> d3ef150d0511d8f2d2b5d8fca64c795e6fd397a4
             j++;
         }
 
@@ -87,7 +75,6 @@ function simpannilai(){
     stateB = ambilMatriks("B");
 }
 
-<<<<<<< HEAD
 function kirim(operasi) {
     simpannilai(); // ambil state terbaru
 
@@ -134,8 +121,6 @@ function tampilkanHasil(matriks) {
 
     document.getElementById("hasil").innerHTML = html;
 }
-=======
->>>>>>> d3ef150d0511d8f2d2b5d8fca64c795e6fd397a4
 
 
 
