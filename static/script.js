@@ -4,13 +4,22 @@ let stateB = [];
 // =================== INPUT DINAMIS ===================
 function input() {
     simpannilai();
+<<<<<<< HEAD
 
+=======
+    
+>>>>>>> c310904e20aa8002271894607c90543717054bd2
     let barisA = parseInt(document.getElementById("barisA").value);
     let kolomA = parseInt(document.getElementById("kolomA").value);
     let barisB = parseInt(document.getElementById("barisB").value);
     let kolomB = parseInt(document.getElementById("kolomB").value);
 
+<<<<<<< HEAD
     // Matriks A
+=======
+
+//Matrix A
+>>>>>>> c310904e20aa8002271894607c90543717054bd2
     if (barisA > 0 && kolomA > 0) {
         let htmlA = "<h3>Matriks A</h3><table>";
         for (let i = 0; i < barisA; i++) {
@@ -53,7 +62,11 @@ function ambilMatriks(prefix) {
         while (true) {
             let el = document.getElementById(prefix + i + j);
             if (!el) break;
+<<<<<<< HEAD
             row.push(parseFloat(el.value) || 0);
+=======
+            row.push(parseFloat(el.value)|| 0);
+>>>>>>> c310904e20aa8002271894607c90543717054bd2
             j++;
         }
 
@@ -71,9 +84,14 @@ function simpannilai() {
     stateB = ambilMatriks("B");
 }
 
+<<<<<<< HEAD
 // =================== KIRIM OPERASI MATRIKS ===================
 function kirim(operasi, target = "A") {
     simpannilai();
+=======
+function kirim(operasi) {
+    simpannilai(); // ambil state terbaru
+>>>>>>> c310904e20aa8002271894607c90543717054bd2
 
     let data = { operasi: operasi, target: target, A: stateA, B: stateB };
 
@@ -149,3 +167,10 @@ function tampilkanHasil(matriks) {
 
     document.getElementById("hasil").innerHTML = html;
 }
+<<<<<<< HEAD
+=======
+
+
+
+
+>>>>>>> c310904e20aa8002271894607c90543717054bd2
