@@ -106,7 +106,7 @@ function obeExecute(type) {
 
     if (type === "swap") { payload.i = i; payload.j = j; }
     else if (type === "scale") { payload.i = i; payload.k = k; }
-    else if (type === "add") { payload.i = j; payload.j = i; payload.k = k; }
+    else if (type === "add") { payload.i = i; payload.j = j; payload.k = k; }
 
     fetch("/matrix", {
         method: "POST",
